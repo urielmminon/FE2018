@@ -1,0 +1,20 @@
+model
+{
+#Likelihood
+	for (i in 1:n) {
+	y[i] ~ dbern(p[i])
+
+	#LOGIT
+	eta[i]<-beta[1]+beta[2]*balance[i]+beta[3]*numTrans[i]
+	p[i]<-exp(eta[i])/(1+exp(eta[i]))
+
+}
+#Priors
+for (j in 1:(m+1)) { beta[j] ~ dnorm(0,0.001) }
+
+#Prediction
+for (i in 1:n) {
+	yf1[i] ~ dbern(p[i])
+}
+
+}

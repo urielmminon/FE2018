@@ -1,0 +1,22 @@
+---
+title: "est46111 - equipo 03 - comentario"
+output: html_notebook
+---
+
+# Objetivo
+
+Definir un procedimiento de deteccion de fraude a tarjetabientes por transacciones
+
+# Enfoque
+
+* Considerar un modelo segmentado conceptualmente con base en las variables `numero de transacciones` y `monto agregado de transacciones` del cliente
+
+* Dentro de cada grupo, definir un modelo de `propension de fraude` con base en la distribucion Bernoulli pero con un parametro diferente para cada grupo 
+
+# Modelo
+
+El contraste se realizara con un enfoque:
+
+a) Considerando el planteamiento/contraste de hipotesis conceptuales (i.e. el grupo de clientes con mas transacciones (numero o monto) son mas propensos a haber sufrido fraude)
+
+* Lo anterior con base en una muestra segmentada 70 por ciento para entrenamiento y 30 por ciento para prueba
